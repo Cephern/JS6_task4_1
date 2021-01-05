@@ -1,0 +1,46 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        title Users
+        style.
+            body {
+                background-color: #ffe5b9;
+
+            }
+
+            h1 {
+                text-align: center;
+                font-size: 2.5em;
+            }
+
+            li {
+                display: flex;
+                justify-content: space-around;
+                border: 1px solid #ff4646;
+                border-radius: 10px;
+                padding: 10px;
+                margin: 5px;
+                background-color: #eff8ff;
+            }
+
+            .orange {
+                color: #ff884b;
+                width: 55%;
+            }
+
+            .blue {
+                color: #00917c;
+                width: 45%;
+                border-right: 2px solid #fdb827;
+                margin-right: 20px;
+            }
+
+
+    body
+        h1= 'Users'
+        ul
+            each user in users
+                li
+                    span(class="blue")= 'Login: ' + user.login
+                    span(class='orange')= 'Password: ' + user.password
